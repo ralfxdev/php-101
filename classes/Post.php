@@ -2,8 +2,6 @@
 
 namespace App;
 
-require('classes/Author.php');
-
 use App\Author;
 
 class Post
