@@ -1,6 +1,10 @@
 <?php declare(strict_types=1);
 
+namespace App;
+
 require('classes/Author.php');
+
+use App\Author;
 
 class Post
 {

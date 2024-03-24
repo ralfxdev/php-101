@@ -1,10 +1,16 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 require('classes/Post.php');
+
+use App\Post;
+
 $title = 'My Blog';
 $posts = Post::getAll();
 $numPosts = count($posts);
 $postText = Post::getText($numPosts);
 $numPostsDisplay = "$numPosts $postText";
+
 ?>
 <h1><?= $title ?></h1>
 <h2><?= $numPostsDisplay ?></h2>
