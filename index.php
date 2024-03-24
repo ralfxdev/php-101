@@ -1,25 +1,9 @@
-<?php
-function getPosts()
-{
-    return [
-        [
-            'title' => 'How to learn PHP',
-            'content' => 'This is how you learn PHP.',
-        ],
-        [
-            'title' => 'How to learn MySQL',
-            'content' => 'This is how you learn MySQL.',
-        ],
-        [
-            'title' => 'How to learn Nginx',
-            'content' => 'This is how you learn Nginx.',
-        ],
-    ];
-}
+<?php declare(strict_types=1);
+require('functions.php');
 $title = 'My Blog';
 $posts = getPosts();
 $numPosts = count($posts);
-$postText = $numPosts === 1 ? 'post' : 'posts';
+$postText = getPostText($numPosts);
 $numPostsDisplay = "$numPosts $postText";
 ?>
 <h1><?= $title ?></h1>
